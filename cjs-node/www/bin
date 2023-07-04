@@ -1,0 +1,4 @@
+#! /usr/bin/env node
+
+const time = new Date()
+console.log(`当前时间是:${time.toLocaleString()}`)

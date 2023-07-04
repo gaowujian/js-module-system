@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <button id="btn-1">打印私有数据</button>
+    <button id="btn-2">修改数据</button>
+    <script src="./module1.js" type="module"></script>
+    <script src="./module2.js" type="module"></script>
+    <script type="module">
+      import { data, printData, updateData } from "./module2.js";
+      import { title, printTitle, module2Data } from "./module1.js";
+      console.log("module2的导出数据:", data);
+      // data = 20;
+      printData();
+      updateData();
+      printData();
+      console.log("data:", data);
+
+      //   ============
+      //   console.log(title);
+      //   printTitle();
+      //   //2. 数据不安全, 模块外可以直接访问和修改模块内数据
+      //   const btn1 = document.querySelector("#btn-1");
+      //   const btn2 = document.querySelector("#btn-2");
+      //   btn1.addEventListener("click", () => {
+      //     printData();
+      //     console.log("module2Data:", module2Data);
+      //   });
+      //   btn2.addEventListener("click", () => {
+      //     // data = "更新数据" + Math.random();
+      //     updateData();
+      //   });
+      //   //  3. 模块间依赖不明, 手动引入并维护造成困难
+      //   myFun();
+    </script>
+    <script src="./module3.js"></script>
+  </body>
+</html>

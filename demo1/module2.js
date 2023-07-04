@@ -4,7 +4,9 @@ function printTitle() {
   console.log("title:", title);
 }
 
-var data = "私有数据";
+var data = {
+  val: "私有数据",
+};
 function printData() {
-  console.log("title:", data);
+  console.log("打印模块内数据:", data);
 }
