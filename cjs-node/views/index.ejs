@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>后端模板渲染</h1>
+    <div>需要渲染的内容是:<%= content %></div>
+    <div>列表内容</div>
+    <ul>
+      <% for(var i in users){ %>
+      <li><%= users[i] %></li>
+      <% } %>
+    </ul>
+    <script>
+      //   const xhr = new XMLHttpRequest();
+      //   xhr.open("get", "/user");
+      //   xhr.onreadystatechange = function (e) {
+      //     if (e.target.readyState === 4) {
+      //       const data = JSON.parse(e.target.response);
+      //       console.log("data:", data);
+      //     }
+      //     // console.log("e:", e);
+      //   };
+      //   xhr.send();
+    </script>
+  </body>
+</html>

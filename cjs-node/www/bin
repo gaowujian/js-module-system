@@ -1,4 +1,12 @@
 #! /usr/bin/env node
 
-const time = new Date()
-console.log(`当前时间是:${time.toLocaleString()}`)
+const time = new Date();
+console.log(`当前时间是:${time.toLocaleString()}`);
+
+const args = process.argv.slice(2);
+console.log("命令行参数:", args);
+function sum() {
+  return (args || []).reduce((cur, pre) => Number(cur) + Number(pre), 0);
+}
+
+console.log("求和结果:", sum());
