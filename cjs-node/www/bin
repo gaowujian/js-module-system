@@ -10,3 +10,5 @@ function sum() {
 }
 
 console.log("求和结果:", sum());
+const fs = require("fs");
+fs.writeFileSync("result.txt", `用户的求和结果是:${sum()}`);
